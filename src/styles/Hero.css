@@ -1,0 +1,17 @@
+.Hero_Img {
+    width: 100%; /* Set the width to 50% of the container */
+    height: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    background-color: transparent;
+  }
+ 
+  
+  .Container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  

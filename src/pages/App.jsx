@@ -1,12 +1,14 @@
 import { AuthProvider } from "../contexts/AuthContext"
-import Signup from "./auth/signup"
+import {Home} from "../Imports/imports"
+import {Signup} from "../Imports/imports"
+import "../styles/index.css"
 
 function App() {
    return (
     <>
     <AuthProvider>
       <Home/>
-     <Signup />
+     {/* <Signup /> */}
     </AuthProvider>
    
     </>

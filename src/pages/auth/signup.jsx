@@ -24,7 +24,7 @@ export default function Signup() {
       alert("Password must be at least 3 characters");
       return setError("Password must be at least 6 characters");
     }
-    else if()
+    
     
 
     await signup(emailRef.current.value, passwordRef.current.value);
