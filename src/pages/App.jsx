@@ -5,6 +5,7 @@ function App() {
    return (
     <>
     <AuthProvider>
+      <Home/>
      <Signup />
     </AuthProvider>
    
