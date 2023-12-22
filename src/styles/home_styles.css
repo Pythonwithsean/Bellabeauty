@@ -1,6 +1,6 @@
 .NavBar{
-    background-color: #1e1e1e;
-    color: white;
+    background-color: #000;
+ 
     height: 50px;
     display: flex;
     justify-content: space-between;
@@ -19,3 +19,9 @@ position: relative;
     list-style: none;
     display:flex;
 }
+
+.NavBar > ul > li{
+    padding: 0 10px;
+    background-color: #000;
+    color: gold;
+}       
