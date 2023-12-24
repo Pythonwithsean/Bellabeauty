@@ -15,15 +15,16 @@ function Home() {
           alt=""
         />
 
+        <div class="snowflakes"></div>
         <div className="Item-2">
-          <h1>Bella beauty</h1>
+          <h1>Bella Beauty</h1>
           <h2>Be Bold Be Beautiful</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-            voluptates, voluptatem, quibusdam, quas voluptatum voluptate
-            consequatur quod voluptatibus quae natus dolorum! Quisquam
-            voluptates, voluptatem, quibusdam, quas voluptatum voluptate
-            consequatur quod voluptatibus quae natus dolorum! Quisquam
+            Transform your style with our exceptional range of products designed
+            to give you a fresh and trendy look. Discover the perfect solutions
+            to enhance your appearance and express your unique personality. We
+            take pride in offering the finest selection of beauty and fashion
+            essentials that cater to your individual preferences.
           </p>
           <button type="button" className="Button">
             Shop Now
