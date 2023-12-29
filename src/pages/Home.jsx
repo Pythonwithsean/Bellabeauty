@@ -31,6 +31,32 @@ function Home() {
           </button>
         </div>
       </div>
+      <section className="section-1">
+        <h1>Our Elegant Products</h1>
+      </section>
+      <section className="grid-1">
+        {" "}
+        <div>
+          {" "}
+          <img
+            src="../../public/66ea8662-93e8-40c8-85e9-749b465453ca.jpg"
+            alt=""
+          />
+          <div className="product-price">£1000</div>
+        </div>
+        <div>
+          {" "}
+          <img
+            src="../../public/e82e2bb5-3106-4a7f-890d-cf9d212a5535.jpg"
+            alt=""
+          />
+          <div className="product-price">£1000</div>
+        </div>
+        <div>
+          {" "}
+          <img src="  " alt="" />
+        </div>
+      </section>
     </>
   );
 }
