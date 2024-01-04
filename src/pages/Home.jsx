@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/home_styles.css";
 import Navbar from "../components/Navbar";
 import { Location } from "../Imports/imports";
+import { hairProducts, makeupProducts, nailProducts } from "../data/Products";
 
 function Home() {
   return (
@@ -35,28 +36,43 @@ function Home() {
         <h1>Our Elegant Products</h1>
       </section>
       <section className="grid-1">
-        {" "}
-        <div>
-          {" "}
-          <img
-            src="../../public/66ea8662-93e8-40c8-85e9-749b465453ca.jpg"
-            alt=""
-          />
-          <div className="product-price">£1000</div>
-        </div>
-        <div>
-          {" "}
-          <img
-            src="../../public/e82e2bb5-3106-4a7f-890d-cf9d212a5535.jpg"
-            alt=""
-          />
-          <div className="product-price">£1000</div>
-        </div>
-        <div>
-          {" "}
-          <img src="  " alt="" />
-        </div>
+        {hairProducts.map((product) => {
+          return (
+            <div className="card">
+              <img src={product.image} alt="" />
+              <h2>{product.name}</h2>
+              <p>{product.description}</p>
+              <p>{product.price}</p>
+              <button className="Button">Add to Cart</button>
+            </div>
+          );
+        })}
       </section>
+      <br />
+      <section className="grid-2">
+        {makeupProducts.map((product) => {
+          return (
+            <div className="card">
+              <img src={product.image} alt="" />
+              <h2>{product.name}</h2>
+              <p>{product.description}</p>
+              <p>{product.price}</p>
+              <button className="Button">Add to Cart</button>
+            </div>
+          );
+        })}
+      </section>
+      <br />
+      <section className="Shop-Now-Section">
+        <p>View More of our Elegant Products</p>
+        <button type="Button" className="Btn">
+          View More Products
+        </button>
+      </section>
+      <br />
+      <section>Hello world</section>
+      <section>Hello world</section>
+      <section>Hello world</section>
     </>
   );
 }
