@@ -1,18 +1,18 @@
-import { AuthProvider } from "../contexts/AuthContext"
-import {Home} from "../Imports/imports"
-import {Signup} from "../Imports/imports"
-import "../styles/index.css"
+import { AuthProvider } from "../contexts/AuthContext";
+import { Home } from "../Imports/imports";
+import { Signup } from "../Imports/imports";
+import "../styles/index.css";
 
 function App() {
-   return (
+  return (
     <>
-    <AuthProvider>
-      <Home/>
-     {/* <Signup /> */}
-    </AuthProvider>
-   
+      <AuthProvider>
+        <Home />
+
+        {/* <Signup /> */}
+      </AuthProvider>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
