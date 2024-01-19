@@ -3,6 +3,7 @@ import "../styles/home_styles.css";
 import Navbar from "../components/Navbar";
 import { Location } from "../Imports/imports";
 import { hairProducts, makeupProducts, nailProducts } from "../data/Products";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
