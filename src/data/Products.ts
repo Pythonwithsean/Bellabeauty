@@ -1,6 +1,16 @@
 // products.js
 
-export const hairProducts = [
+
+type products =  {
+  id: number,
+  name: string,
+  brand: string, 
+  price: number, 
+  volume: string, 
+  image : string,
+}
+
+export const hairProducts: products[] = [
   {
     id: 1,
     name: "Shampoo",

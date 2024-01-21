@@ -1,9 +1,7 @@
-import React from "react";
 import "../styles/home_styles.css";
 import Navbar from "../components/Navbar";
 import { Location } from "../Imports/imports";
 import { hairProducts, makeupProducts, nailProducts } from "../data/Products";
-import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -17,7 +15,7 @@ function Home() {
           alt=""
         />
 
-        <div class="snowflakes"></div>
+        <div className="snowflakes"></div>
         <div className="Item-2">
           <h1>Bella Beauty</h1>
           <h2>Be Bold Be Beautiful</h2>
@@ -42,7 +40,7 @@ function Home() {
             <div className="card">
               <img src={product.image} alt="" />
               <h2>{product.name}</h2>
-              <p>{product.description}</p>
+              {/* <p>{product.description}</p> */}
               <p>{product.price}</p>
               <button className="Button">Add to Cart</button>
             </div>
@@ -56,7 +54,7 @@ function Home() {
             <div className="card">
               <img src={product.image} alt="" />
               <h2>{product.name}</h2>
-              <p>{product.description}</p>
+              {/* <p>{product.description}</p> */}
               <p>{product.price}</p>
               <button className="Button">Add to Cart</button>
             </div>
@@ -66,7 +64,7 @@ function Home() {
       <br />
       <section className="Shop-Now-Section">
         <p>View More of our Elegant Products</p>
-        <button type="Button" className="Btn">
+        <button type="button" className="Btn">
           View More Products
         </button>
       </section>
