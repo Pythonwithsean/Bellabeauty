@@ -3,6 +3,7 @@ import { productRouter } from './routes/product';
 import cors from "cors"
 import { userRouter } from './routes/user';
 const app: Express = express()
+
 const PORT = 5000; 
 app.use(cors());
 app.use(express.json())
