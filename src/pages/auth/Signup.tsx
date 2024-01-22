@@ -1,5 +1,5 @@
 import React, { FormEvent, LegacyRef, MutableRefObject, useRef } from "react";
-import "./signup.css";
+import "../../styles/signup.css";
 
 export default function Signup() {
   const usernameRef: MutableRefObject<
@@ -20,40 +20,42 @@ export default function Signup() {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="form_container">
-        <h2>Sign Up</h2>
-        <label htmlFor="username">Username:</label>
-        <input
-          type="text"
-          id="username"
-          ref={usernameRef as LegacyRef<HTMLInputElement>}
-          name="username"
-          required
-        />
+      <div className="sign-up-container">
+        <form onSubmit={handleSubmit} className="form_container">
+          <h2>Sign Up</h2>
+          <label htmlFor="username">Username:</label>
+          <input
+            type="text"
+            id="username"
+            ref={usernameRef as LegacyRef<HTMLInputElement>}
+            name="username"
+            required
+          />
 
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          ref={emailRef as LegacyRef<HTMLInputElement>}
-          name="email"
-          required
-        />
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            ref={emailRef as LegacyRef<HTMLInputElement>}
+            name="email"
+            required
+          />
 
-        <label htmlFor="password">Password:</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          ref={passwordRef as LegacyRef<HTMLInputElement>}
-          required
-        />
+          <label htmlFor="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            ref={passwordRef as LegacyRef<HTMLInputElement>}
+            required
+          />
 
-        <button type="submit">Sign Up</button>
-      </form>
-      <p className="login_prompt">
-        Already have an account? <a href="/login">Log in</a>
-      </p>
+          <button type="submit">Sign Up</button>
+        </form>
+        <p className="login_prompt">
+          Already have an account? <a href="/login">Log in</a>
+        </p>
+      </div>
     </>
   );
 }

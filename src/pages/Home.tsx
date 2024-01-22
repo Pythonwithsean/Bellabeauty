@@ -1,7 +1,7 @@
 import "../styles/home_styles.css";
 import Navbar from "../components/Navbar";
 import { Location } from "../Imports/imports";
-import { hairProducts, makeupProducts, nailProducts } from "../data/Products";
+import { hairProducts, makeupProducts } from "../data/Products";
 
 function Home() {
   return (

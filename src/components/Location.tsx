@@ -1,22 +1,23 @@
-import React from "react";
 import { Mail } from "lucide-react";
 import { Phone } from "lucide-react";
 import { ShoppingCart } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import { User } from "lucide-react";
 
 function Location() {
   return (
-    <div class="location-container">
+    <div className="location-container">
       Bella Beauty UK
       <Mail className="phone-logo" />
       07399134957
-      <Phone className="phone-logo" src="/img/contact-png-03.png" alt="" />
+      <Phone className="phone-logo" />
       <ShoppingCart className="cart-logo" />
-      <span className="cart-amount">0</span>
       <User className="User" />
       <button className="Btn">Login</button>
-      <button className="Btn">Register</button>
+      <Link to="/sign-up">
+        <button className="Btn"> Register</button>
+      </Link>
     </div>
   );
 }

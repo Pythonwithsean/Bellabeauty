@@ -1,0 +1,71 @@
+.form_container {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  background-color: #000;
+  border: 2px solid #fbaa00;
+  color: #fbaa00;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 100px auto;
+}
+
+h2 {
+  margin-bottom: 30px;
+  font-size: 2em;
+}
+
+label {
+  margin-bottom: 8px;
+  display: block;
+  text-align: left;
+  font-size: 1.1em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 2px solid #fbaa00;
+  background-color: transparent;
+  color: #fbaa00;
+  font-size: 1.1em;
+}
+
+input::placeholder {
+  color: #fbaa00;
+}
+
+button {
+  width: 100%;
+  background-color: #fbaa00;
+  color: #000;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #c88700;
+}
+
+.login_prompt {
+  margin-top: 20px;
+  color: #fbaa00;
+}
+
+.login_prompt a {
+  color: #fbaa00;
+  text-decoration: none;
+}
+
+.login_prompt a:hover {
+  text-decoration: underline;
+}
