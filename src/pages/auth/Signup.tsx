@@ -1,4 +1,4 @@
-import React, { FormEvent, LegacyRef, MutableRefObject, useRef } from "react";
+import { FormEvent, LegacyRef, MutableRefObject, useRef } from "react";
 import "../../styles/signup.css";
 
 export default function Signup() {
@@ -12,10 +12,37 @@ export default function Signup() {
     HTMLFormElement | HTMLInputElement | undefined
   > = useRef();
 
-  const [error, setError] = React.useState("");
+  const signUpFunc = async (
+    username: string,
+    email: string,
+    password: string
+  ) => {
+    try {
+      console.log(username);
+      console.log(password);
+      fetch("localhost:5000/auth/users", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify({
+          username: username,
+          email: email,
+          password: password,
+        }),
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    signUpFunc(
+      usernameRef.current?.value,
+      emailRef.current?.value,
+      passwordRef.current?.value
+    );
   };
 
   return (
@@ -28,6 +55,7 @@ export default function Signup() {
             type="text"
             id="username"
             ref={usernameRef as LegacyRef<HTMLInputElement>}
+            key={"Username Key"}
             name="username"
             required
           />
@@ -38,6 +66,7 @@ export default function Signup() {
             id="email"
             ref={emailRef as LegacyRef<HTMLInputElement>}
             name="email"
+            key={"Email Key "}
             required
           />
 
@@ -47,6 +76,7 @@ export default function Signup() {
             id="password"
             name="password"
             ref={passwordRef as LegacyRef<HTMLInputElement>}
+            key={"Password Key"}
             required
           />
 
