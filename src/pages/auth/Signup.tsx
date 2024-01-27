@@ -18,12 +18,10 @@ export default function Signup() {
     password: string
   ) => {
     try {
-      console.log(username);
-      console.log(password);
-      fetch("http://localhost:7000/auth/users", {
+      const response = await fetch("http://localhost:5702/auth/user", {
         method: "POST",
         headers: {
-          "content-type": "application/json",
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           username: username,
@@ -31,8 +29,17 @@ export default function Signup() {
           password: password,
         }),
       });
+
+      if (response.ok) {
+        console.log("Sign up successful");
+        const r = await response.json();
+        console.log(r.TOKEN);
+        localStorage.setItem("TOKEN", r.TOKEN);
+      } else {
+        console.error("Sign up failed");
+      }
     } catch (err) {
-      console.log(err);
+      console.error("Error occurred during sign up:", err);
     }
   };
 

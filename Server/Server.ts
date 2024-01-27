@@ -4,7 +4,7 @@ import cors from "cors";
 import { userRouter } from "./routes/user";
 const app: Express = express();
 
-const PORT = 7000;
+const PORT = 5702;
 app.use(cors());
 app.use(express.json());
 
@@ -16,5 +16,5 @@ app.get("/api", (req: Request, res: Response) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server connectec at ${PORT}`);
+  console.log(`Server connected at ${PORT}`);
 });
