@@ -20,7 +20,7 @@ export default function Signup() {
     try {
       console.log(username);
       console.log(password);
-      fetch("localhost:5000/auth/users", {
+      fetch("http://localhost:7000/auth/users", {
         method: "POST",
         headers: {
           "content-type": "application/json",

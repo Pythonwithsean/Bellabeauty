@@ -8,8 +8,16 @@ export const userRouter: Router = Router();
 
 
 const handler = (req: Request, res: Response) => {
+	const data = req.body;
+	console.log(data)
 	res.send("User Api")
 }
 
+const exampleHandler = (req: Request, res: Response) => {
+	res.send("Exmaple Testing")
+}
 
-userRouter.get("/user", handler )
+
+userRouter.post("/user", handler)
+userRouter.get("example", exampleHandler)
+
