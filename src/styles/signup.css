@@ -43,7 +43,8 @@ input::placeholder {
 button {
   width: 100%;
   background-color: #fbaa00;
-  color: #000;
+  color: #fbaa00;
+  border: 2px solid #fbaa00;
   padding: 15px;
   border: none;
   border-radius: 5px;

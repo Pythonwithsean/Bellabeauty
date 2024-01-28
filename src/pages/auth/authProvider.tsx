@@ -16,13 +16,12 @@ type authProviderProps = {
 
 const AuthProvider = ({ children }: authProviderProps): JSX.Element => {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
-
+  const TOKEN = localStorage.getItem("TOKEN");
   useEffect(() => {
-    const TOKEN = localStorage.getItem("TOKEN");
     if (TOKEN) {
       setIsAuthenticated(true);
     }
-  }, []);
+  }, [TOKEN]);
 
   const contextValue: AuthcontextType = {
     isAuthenticated: isAuthenticated,
@@ -31,4 +30,4 @@ const AuthProvider = ({ children }: authProviderProps): JSX.Element => {
   return <auth.Provider value={contextValue}>{children}</auth.Provider>;
 };
 
-export { AuthProvider, auth };
+export { AuthProvider, auth, type AuthcontextType };
