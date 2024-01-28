@@ -14,7 +14,9 @@ function Location() {
       <Phone className="phone-logo" />
       <ShoppingCart className="cart-logo" />
       <User className="User" />
-      <button className="Btn">Login</button>
+      <Link to="/login">
+        <button className="Btn">Login</button>
+      </Link>
       <Link to="/sign-up">
         <button className="Btn"> Register</button>
       </Link>

@@ -14,7 +14,6 @@ const customColors = {
 
 const customTheme = {
   colors: customColors,
-  // Add other customizations as needed
 };
 
 const theme = extendTheme(customTheme);

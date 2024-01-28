@@ -4,6 +4,7 @@ import "../styles/index.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { NotFound } from "../Imports/imports";
 import { AuthProvider } from "../Imports/imports";
+import { Login } from "../Imports/imports";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             ></Route>
 
             <Route path="/sign-up" element={<Signup />}></Route>
+            <Route path="/login" element={<Login />}></Route>
           </Routes>
         </div>
       </Router>

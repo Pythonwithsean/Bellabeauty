@@ -6,7 +6,8 @@ import {
   useState,
 } from "react";
 import "../../styles/signup.css";
-import { Alert, AlertIcon } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
+import { Alert, AlertIcon, Container } from "@chakra-ui/react";
 
 export default function Signup() {
   const usernameRef: MutableRefObject<
@@ -76,44 +77,48 @@ export default function Signup() {
           </Alert>
         ) : null}
 
-        <form onSubmit={handleSubmit} className="form_container">
-          <h2>Sign Up</h2>
-          <label htmlFor="username">Username:</label>
-          <input
-            type="text"
-            id="username"
-            ref={usernameRef as LegacyRef<HTMLInputElement>}
-            key={"Username Key"}
-            name="username"
-            required
-          />
+        <Link to="/">
+          <h3>Bellabeauty</h3>
+        </Link>
+        <Container>
+          <form onSubmit={handleSubmit} className="form_container">
+            <h2>Sign Up</h2>
+            <label htmlFor="username">Username:</label>
+            <input
+              type="text"
+              id="username"
+              ref={usernameRef as LegacyRef<HTMLInputElement>}
+              key={"Username Key"}
+              name="username"
+              required
+            />
 
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            ref={emailRef as LegacyRef<HTMLInputElement>}
-            name="email"
-            key={"Email Key "}
-            required
-          />
+            <label htmlFor="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              ref={emailRef as LegacyRef<HTMLInputElement>}
+              name="email"
+              key={"Email Key "}
+              required
+            />
 
-          <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            ref={passwordRef as LegacyRef<HTMLInputElement>}
-            key={"Password Key"}
-            required
-          />
+            <label htmlFor="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              ref={passwordRef as LegacyRef<HTMLInputElement>}
+              key={"Password Key"}
+              required
+            />
 
-          <button type="submit">Sign Up</button>
-        </form>
-
-        <p className="login_prompt">
-          Already have an account? <a href="/login">Log in</a>
-        </p>
+            {/* <button type="submit">Sign Up</button> */}
+            <p className="login_prompt">
+              Already have an account? <a href="/login">Log in</a>
+            </p>
+          </form>
+        </Container>
       </div>
     </>
   );

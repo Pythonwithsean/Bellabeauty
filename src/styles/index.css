@@ -5,7 +5,8 @@
   font-family: "Lato", sans-serif;
 }
 
-.chakra-ui-dark {
+.chakra-ui-dark,
+.chakra-ui-light {
   background-color: #000000;
 }
 
