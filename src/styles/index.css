@@ -5,6 +5,10 @@
   font-family: "Lato", sans-serif;
 }
 
+.chakra-ui-dark {
+  background-color: #000000;
+}
+
 body {
   width: 100%;
   height: 100vh;

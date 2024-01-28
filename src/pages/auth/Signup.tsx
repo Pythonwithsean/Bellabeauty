@@ -1,5 +1,6 @@
 import { FormEvent, LegacyRef, MutableRefObject, useRef } from "react";
 import "../../styles/signup.css";
+import { Alert, AlertIcon } from "@chakra-ui/react";
 
 export default function Signup() {
   const usernameRef: MutableRefObject<
@@ -33,7 +34,7 @@ export default function Signup() {
       if (response.ok) {
         console.log("Sign up successful");
         const r = await response.json();
-        console.log(r.TOKEN);
+
         localStorage.setItem("TOKEN", r.TOKEN);
       } else {
         console.error("Sign up failed");
@@ -55,6 +56,10 @@ export default function Signup() {
   return (
     <>
       <div className="sign-up-container">
+        <Alert status="success" variant="solid">
+          <AlertIcon />
+          Account Created head to login!!
+        </Alert>
         <form onSubmit={handleSubmit} className="form_container">
           <h2>Sign Up</h2>
           <label htmlFor="username">Username:</label>
@@ -89,6 +94,7 @@ export default function Signup() {
 
           <button type="submit">Sign Up</button>
         </form>
+
         <p className="login_prompt">
           Already have an account? <a href="/login">Log in</a>
         </p>

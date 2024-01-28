@@ -35,9 +35,9 @@ function Home() {
         <h1>Our Elegant Products</h1>
       </section>
       <section className="grid-1">
-        {hairProducts.map((product) => {
+        {hairProducts.map((product, i) => {
           return (
-            <div className="card">
+            <div className="card" key={i}>
               <img src={product.image} alt="" />
               <h2>{product.name}</h2>
               {/* <p>{product.description}</p> */}
